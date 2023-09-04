@@ -1,0 +1,97 @@
+
+/* Agrega estos estilos CSS en tu archivo de estilos (por ejemplo, styles.css) */
+.info-image {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+  width: 50px; /* Ajusta automáticamente el ancho para mantener la proporción */
+  height: 50px; /* Ajusta automáticamente la altura para mantener la proporción */
+}
+
+/* Establecer el tamaño de las imágenes en las tarjetas */
+.image-container {
+  width: 100%; 
+  height: 200%; 
+  object-fit: cover; 
+  border-radius: 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 70%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.full-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 20px; */
+}
+
+.image-container-grid-list{
+  display: grid;
+  grid-template-columns: repeat(3, 10fr); /* Define 3 columnas iguales */
+  gap: 20px; /* Agrega espacio entre filas y columnas */
+}
+
+
+
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-title {
+  font-size: 38px; 
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+.search-field {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto; 
+}
+
+
+.custom-label {
+  font-size: 1.5rem;
+}
+
+.custom-definition{
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+}
+
+/**/
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-group {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 10px; /* Espacio entre cada grupo de información */
+}
+
+.custom-definition {
+  margin: 1px; /* Quita el margen predeterminado de los párrafos */
+}
+
+
+
+.mat-grid-tile {
+  margin-bottom: 10px;
+}
+
+/* Reducir el margen derecho en las imágenes y la información de la vivienda */
+.image-container-grid-list,
+.custom-definition {
+  margin-right: 5px;
+}

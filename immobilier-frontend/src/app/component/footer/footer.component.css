@@ -1,0 +1,62 @@
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1E73BE; /* Color de fondo azul */
+  color: #ffffff; /* Color del texto blanco */
+  margin-top: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  margin-left: 30%;
+}
+
+/* Estilo para el contenedor de la lista */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e73be; /* Color de fondo azul (1E73BE) */
+  padding: 20px;
+  color: white; /* Texto en color blanco */
+  margin-right: 25%;
+}
+
+.search-field {
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* Estilos para el botón de búsqueda */
+button {
+  margin-left: 10px;
+}
+
+
+/* Estilo para el campo de búsqueda */
+input {
+  width: 80%;
+  height: 5vh;
+  border-radius: 20vh;
+  text-align: center;
+}
+
+button.mat-button {
+  width: 100%;
+}
+
+
+
+/* Estilo para cada elemento de la lista */
+.list-item {
+  margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+

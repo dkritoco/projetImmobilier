@@ -1,0 +1,182 @@
+/*head*/
+.user-link {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  text-align: center; /* Centra el contenido del enlace */
+}
+
+.user-name {
+  font-size: 12px; /* Puedes ajustar el tamaño del texto según tus preferencias */
+}
+
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-image {
+  width: 30px; /* Ajusta este valor según el tamaño deseado */
+  height: 30px; /* Ajusta este valor según el tamaño deseado */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.company-logo {
+  height: 60px; /* Puedes ajustar este valor según el tamaño deseado */
+  width: auto; /* Esto mantendrá la proporción original del logo */
+}
+
+/* Estilos para el campo de búsqueda */
+.search-field {
+  border-radius: 25px;
+  overflow: hidden;
+  border-color: aliceblue;
+  box-shadow: none;
+}
+
+
+/* Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.user-options {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 2; 
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar el menú desplegable cuando se hace clic en la imagen */
+.user-link.clicked .dropdown-content {
+  display: block;
+}
+
+
+
+/* Estilos para la lista de opciones */
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-list li {
+  padding: 8px;
+}
+
+.options-list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.options-list li a:hover {
+  background-color: #f1f1f1;
+}
+
+.style_button {
+  font-size: 25px; 
+  margin: 0 0px;
+  margin-left: -180px; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*body*/
+.bootstrap-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 400px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 130%; /* Establece la altura del contenedor al 100% de la altura de la ventana */
+  margin-top: -130px;
+}
+
+/* Estilo para el contenedor de la imagen */
+.image-container {
+  width: 100%;
+  height: 70%; /* Altura fija del contenedor, puedes ajustar el valor según tus necesidades */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.full-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.mat-card {
+  position: absolute;
+  left: 50%; /* Ajusta la posición horizontal del mat-card */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centra el mat-card utilizando transformaciones */
+  width: 90%; /* Ajusta el ancho del mat-card según tus necesidades */
+  max-width: 400px; /* Establece un ancho máximo para evitar que el mat-card sea demasiado grande */
+  background-color: white; /* Cambia el fondo del mat-card si lo deseas */
+  border-radius: 30px; /* Agrega bordes redondeados al mat-card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra para darle profundidad */
+}
+
+
+

@@ -1,0 +1,58 @@
+<div class="navbar-container">
+<mat-toolbar class="custom-toolbar">
+  <!-- Logo de la empresa que se redirige a la página principal -->
+  <a routerLink="/">
+    <img
+      src="../../../assets/1519864287099.jpg"
+      alt="Logo de la empresa"
+      class="company-logo"
+    />
+  </a>
+
+  <!-- Menú de opciones -->
+  <button class="style_button" mat-button routerLink="/chercher">
+    Chercher
+  </button>
+  <button class="style_button" mat-button routerLink="/renovation">
+    Rénovation
+  </button>
+  <button class="style_button" mat-button routerLink="/estimation-immobiliere">
+    Estimation immobilière
+  </button>
+
+  <!-- Espacio flexible para alinear el resto de los elementos a la derecha -->
+  <span class="flexible-space"></span>
+
+  <!-- Campo de búsqueda con imagen de lupa -->
+ <div class="search-wrapper">
+  <span class="search-label">Rechercer par ID</span>
+  <input matInput class="search-input" placeholder=" " />
+  <button class="search-button" matSuffix>
+    <img src="../../../assets/search.svg" alt="" class="search-icon" />
+  </button>
+</div>
+
+  <!-- Imagen del usuario para iniciar sesión o registro -->
+  <div class="user-container">
+    <a href="javascript:void(0);" class="user-link" (click)="toggleOptions()">
+      <img
+        src="../../../assets/user (1).svg"
+        alt="Imagen del usuario"
+        class="user-image"
+      />
+    </a>
+    <div class="user-name" *ngIf="login.isLoggedIn()">{{ userRole }}</div>
+
+    <div class="user-options" *ngIf="showOptions">
+      <ul class="options-list">
+        <li><a href="/login">Connexion</a></li>
+        <li><a href="/signup" (click)="redirectToRegistro()">S'inscrire</a></li>
+        <li><a href=" " (click)="redirectToSalir()">Accueil</a></li>
+        <li *ngIf="isConnected" (click)="logout()">Cerrar sesión</li>
+      </ul>
+    </div>
+  </div>
+</mat-toolbar>
+</div>
+
+

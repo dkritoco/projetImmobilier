@@ -1,0 +1,130 @@
+<app-navbar></app-navbar>
+<br />
+<br />
+<div class="image-container">
+  <img
+    src="../../../assets/familia-pasando-tiempo-juntos-casa.jpg"
+    alt="Primera imagen"
+    class="full-screen-image"
+  />
+</div>
+<br />
+<br />
+<div class="search-container">
+  <h1 class="search-title">Cherchez et sélectionnez avec sérénité</h1>
+  <br />
+  <mat-form-field class="search-field">
+    <mat-label class="custom-label">Bien immobilier</mat-label>
+    <mat-select (selectionChange)="onSearchOptionChange($event.value, false)">
+      <mat-option class="custom-label" value="all">Tout</mat-option>
+      <mat-option class="custom-label" value="Louer">Louer</mat-option>
+      <mat-option class="custom-label" value="Acheter">Acheter</mat-option>
+      <mat-option class="custom-label" value="Revente">Revente</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  <br />
+  <mat-form-field class="search-field">
+    <mat-label class="custom-label">Localisation</mat-label>
+    <mat-select (selectionChange)="onSearchOptionChange($event.value, true)">
+      <mat-option class="custom-label" value="Tout"> Tout </mat-option>
+      <mat-option class="custom-label" value="Metz">Metz</mat-option>
+      <mat-option class="custom-label" value="Luxembourg"
+        >Luxembourg</mat-option
+      >
+      <mat-option class="custom-label" value="Montigny">Montigny</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<br />
+<br />
+
+<mat-grid-list cols="3" gutterSize="16px" class="image-grid-list">
+  <mat-grid-tile *ngFor="let place of filteredLivingPlace">
+    <mat-card>
+      <div>
+        <ng-container *ngIf="place.jpgphoto">
+          <img
+            [src]="place.jpgphoto"
+            alt="imagen de la vivienda"
+            class="image-container-grid-list"
+          />
+        </ng-container>
+        <br /><br />
+      </div>
+      <p class="custom-definition">
+        {{ place.realEstateType }} ID: {{ place.propertyId }}
+      </p>
+      <div class="info-container">
+        <div class="info-group" style="margin-left: 50px;">
+          <img
+            class="info-image"
+            src="../../../assets/location.svg"
+            alt="address"
+            style="margin-right: 10px"
+          />
+          <p class="custom-definition" style="margin-right: 100px;">{{ place.address }}</p>
+          <img
+            class="info-image"
+            src="../../../assets/price-tag (1).svg"
+            alt="price"
+            style="margin-right: 10px"
+          />
+          <p class="custom-definition">{{ place.price }}</p>
+        </div>
+
+        <div class="info-group">
+          <img
+            class="info-image"
+            src="../../../assets/measure.svg"
+            alt="Metros cuadrados"
+            style="margin-right: 10px"
+          />
+          <p class="custom-definition" style="margin-right: 170px;">{{ place.houseSurface }}</p>
+     
+          <img
+            class="info-image"
+            src="../../../assets/hotel.svg"
+            alt="Habitaciones"
+            style="margin-right: 10px"
+          />
+          <p class="custom-definition" style="margin-right: 170px;">{{ place.numberOfRooms }}</p>
+        
+
+       
+          <img
+            class="info-image"
+            src="../../../assets/garage.svg"
+            alt="Parking"
+            style="margin-right: 10px"
+          />
+          <p class="custom-definition" >{{ place.parking }}</p>
+        </div>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-container *ngIf="isAdmin">
+<mat-grid-list cols="3"  class="button-grid-list">
+  <mat-grid-tile>
+    <button mat-raised-button color="warn" (click)="deleteProperty()">
+      <mat-icon>delete</mat-icon>
+      <span>Supprimer</span>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-raised-button color="primary" (click)="updateProperty()">
+      <mat-icon>edit</mat-icon>
+      <span>Mettre à jour</span>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-raised-button color="accent"  (click)="insertProperty()">
+      <mat-icon>add</mat-icon>
+      <span>Insérer </span>
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+</ng-container>
+<app-footer></app-footer>

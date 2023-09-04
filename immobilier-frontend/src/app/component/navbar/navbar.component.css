@@ -1,0 +1,144 @@
+.user-link {
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  text-align: center; /* Centra el contenido del enlace */
+}
+
+mat-toolbar {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9a9595;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.company-logo {
+  
+  height: 100px;
+  width: auto;
+}
+
+
+.user-options {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 2;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar el menú desplegable cuando se hace clic en la imagen */
+.user-link.clicked .dropdown-content {
+  display: block;
+}
+
+/* Estilos para la lista de opciones */
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-list li {
+  padding: 8px;
+}
+
+.options-list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.options-list li a:hover {
+  background-color: #f1f1f1;
+}
+
+.style_button {
+  font-size: 30px;
+  margin-left: -180px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+}
+
+.search-wrapper {
+  z-index: 1000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-top: 50px;
+}
+
+.search-label {
+  margin-right: 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+.navbar-container {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

@@ -1,0 +1,55 @@
+.user-link {
+  display: inline-block; /* Cambia el display a bloque en línea para ocupar todo el ancho disponible */
+  text-decoration: none; /* Para quitar la decoración de subrayado si no quieres que aparezca al pasar el mouse */
+}
+
+/* Asegura que la imagen tenga un tamaño adecuado */
+.user-image {
+  width: 30px; /* Ajusta el ancho según tus necesidades */
+  height: 30px; /* Ajusta la altura según tus necesidades */
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-field {
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.user-image {
+  width: 30px; /* Ajusta este valor según el tamaño deseado */
+  height: 30px; /* Ajusta este valor según el tamaño deseado */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.company-logo {
+  height: 60px; /* Puedes ajustar este valor según el tamaño deseado */
+  width: auto; /* Esto mantendrá la proporción original del logo */
+}
+
+/* Estilos para el campo de búsqueda */
+.search-field {
+  border-radius: 25px;
+  overflow: hidden;
+  border-color: aliceblue;
+  box-shadow: none;
+}
+
+/* Estilos para el input dentro del campo de búsqueda */
+.mat-form-field-wrapper {
+  border-radius: 25px;
+  border-top: 200px;
+}
+
+/* Estilos para el botón con la imagen de la lupa */
+.mat-icon {
+  background-color: transparent; /* Para que el botón sea transparente */
+  border: none; /* Para quitar el borde del botón */
+  box-shadow: none; /* Para quitar la sombra del botón */
+}

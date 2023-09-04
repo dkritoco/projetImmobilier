@@ -1,0 +1,101 @@
+<app-navbar></app-navbar>
+  <div class="content">
+  <!-- Contenedor de la imagen -->
+  <div class="image-container">
+    <img
+      src="../../../assets/desing.png"
+      alt="Primera imagen"
+      class="full-screen-image"
+    />
+  </div>
+
+  <!-- Recuadro de texto -->
+  <div class="text-box">
+    <h1 style="text-align: center">
+      Découvrez la valeur de vos biens immobiliers avec nos estimations
+    </h1>
+    <br />
+    <p>
+      * Options flexibles pour évaluer votre propriété, que ce soit en ligne ou
+      lors d'une visite personnalisée
+    </p>
+    <p>
+      * Vous décidez si vous utilisez vos propres photos ou si vous préférez
+      notre service, garantissant une qualité encore plus exceptionnelle.
+    </p>
+    <p>
+      * Nous avons des experts généralistes dédiés à l'évaluation de votre bien
+      immobilier, vous offrant une vision experte et précise.
+    </p>
+    <p>
+      * Nos services couvrent la captivante région de Lorraine et le prospère
+      Luxembourg
+    </p>
+    <br />
+    <h1 style="text-align: center">Qui sommes-nous</h1>
+    <br />
+    <p>
+      Nous sommes une entreprise familiale spécialisée dans le secteur
+      immobilier avec plus de 50 ans d'expérience. Notre engagement est de
+      fournir un service fiable et de qualité à nos clients, en nous adaptant à
+      leurs besoins et en offrant des solutions efficaces sur le marché
+      immobilier.
+    </p>
+  </div>
+</div>
+
+<div class="content2">
+  <div class="options-container">
+    <ul class="options-list">
+      <li (click)="showContent('achat')">Achat ></li>
+      <li (click)="showContent('location')">Location ></li>
+      <li (click)="showContent('revente')">Revente ></li>
+      <li (click)="showContent('renovation')">Rénovation ></li>
+    </ul>
+    <div class="selected-option-content">
+      <div *ngIf="selectedOption === 'achat'" class="option-content">
+        <h1>Achat</h1>
+        <br />
+        <p>
+          Favorisons la rencontre entre les propriétaires et les acheteurs à
+          travers des canaux digitaux, puis les conseillons sur les aspects
+          notariés, bancaires, fiscaux et contractuels impliqués dans les
+          transactions immobilières. Quant aux acheteurs, nous les écoutons pour
+          ensuite leur présenter des biens correspondant à leur profil de
+          recherche, avec des évaluations et des inspections légales préalables
+          garantissant un achat intelligent et sécurisé. Tarif pour les
+        </p>
+        <p>Propriétaires : X% de commission si la transaction est réalisée. </p>
+        <p>Tarif pour les acheteurs : X% de commission si la transaction est réalisée.</p>
+      </div>
+      <div *ngIf="selectedOption === 'location'" class="option-content">
+        <p>Contenido para Location.</p>
+      </div>
+      <div *ngIf="selectedOption === 'revente'" class="option-content">
+        <p>Contenido para Revente.</p>
+      </div>
+      <div *ngIf="selectedOption === 'renovation'" class="option-content">
+        <h1>Rénovation</h1>
+        <p>
+          En ce qui concerne notre spécialisation dans la rénovation
+          immobilière, nous sommes fiers de proposer des services complets de
+          réaménagement et de rénovation afin d'optimiser la valeur et
+          l'apparence des propriétés. Notre équipe d'experts en construction et
+          en design travaille en étroite collaboration avec nos clients pour
+          transformer les espaces, des petites améliorations aux rénovations
+          complètes, en portant une attention particulière aux détails et en
+          mettant l'accent sur la qualité et l'excellence. Faites-nous confiance
+          pour transformer votre propriété en un espace rénové et attrayant,
+          répondant à vos attentes et mettant en valeur son potentiel sur le
+          marché immobilier
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  <app-footer></app-footer>
+
+
+
+
+
